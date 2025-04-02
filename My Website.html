@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modern Basketball Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-item:hover { color: #facc15; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-gray-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Basketball Gear Website</h1>
+            <ul class="flex space-x-6">
+                <li class="nav-item cursor-pointer">Home</li>
+                <li class="nav-item cursor-pointer">About</li>
+                <li class="nav-item cursor-pointer">Services</li>
+                <li class="nav-item cursor-pointer">Gallery</li>
+                <li class="nav-item cursor-pointer">Contact</li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="relative w-full max-w-4xl mx-auto mt-6 overflow-hidden rounded-lg">
+        <div class="flex transition-transform duration-700" id="slider">
+            <img src="BASKETBALL.jpg" class="w-full" alt="Slide 1">
+            <img src="KOBE SHOES.jpg" class="w-full" alt="Slide 2">
+            <img src="GSW.jpg" class="w-full" alt="Slide 3">
+        </div>
+    </div>
+    
+    <section class="p-8 text-center">
+        <h2 class="text-3xl font-semibold">Welcome to Our Website</h2>
+        <p class="text-gray-700 mt-2">Explore our Services and Equipments Made for you..</p>
+    </section>
+    
+    <section class="p-8 bg-gray-200 text-center">
+        <h2 class="text-3xl font-semibold">Our Services</h2>
+        <p class="text-gray-700 mt-2">We provide Basketballs,Shoes and Basketball Gears eg Vest..</p>
+    </section>
+    
+    <section class="p-8 text-center">
+        <h2 class="text-3xl font-semibold">Watch Our Video</h2>
+        <div class="mt-4">
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/qgedPFhewVg?autoplay=1&mute=1" 
+            frameborder="0" 
+            allow="autoplay;encrypted-media"
+            allowfullscreen>
+        </iframe>
+        </div>
+    </section>
+    
+    <script>
+        let index = 0;
+        function slide() {
+            const slider = document.getElementById("slider");
+            index = (index + 1) % 3;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(slide, 3000);
+    </script>
+</body>
+</html>
